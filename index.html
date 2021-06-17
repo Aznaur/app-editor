@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.min.css">
+        <title>Шаблон</title>
+    </head>
+    <body>
+      <section class="editor">
+        <form class="editor__form">
+          <a href="#">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#616161">
+              <path d="M24 23h-20c-2.208 0-4-1.792-4-4v-15.694c.313-1.071 1.285-2.306 3-2.306 1.855 0 2.769 1.342 2.995 2.312l.005 1.688h18v18zm-1-17h-17v13s-.665-1-2-1c-1.104 0-2 .896-2 2s.896 2 2 2h19v-16zm-18-2.68c-.427-.971-1.327-1.325-2-1.32-.661.005-1.568.3-2 1.32v16.178c.394-1.993 2.245-2.881 4-2.401v-13.777zm15 15.68h-12v-10h12v10zm-8-9h-3v8h10v-4h-2v3h-1v-3h-3v3h-1v-7zm7 0h-6v3h6v-3z"/>
+            </svg>
+          </a>
+          <h1>Создай свой баннер</h1>
+
+          <input type="text" name="width" id="widthField" placeholder="Ширина" maxlength="3" required>
+          <input type="text" name="height" id="heightField" maxlength="3" placeholder="Высота" required>
+
+          <label for="colorField">Фон</label>
+          <input type="color" name="color_bg" id="colorField">
+
+          <label for="upload">Добавить иллюстрацию</label>
+          <input type="file" id='upload' >
+
+          <textarea placeholder="Заголовок"></textarea>
+
+          <button type="submit" class="editor__btn">Preview</button>
+          <div class="wrapper-button">
+            <a class="save btn" href="#">Скачать баннер</a>
+            <a class="copy-html btn" href="#">Скопировать html</a>
+            <a class="copy-json btn" href="#">Скопировать JSON</a>
+          </div>
+        </form>
+
+        <div class="editor__preview">
+          <canvas id="canvas" width="141" height="188" ></canvas>
+        </div>
+
+      </section>
+      <script src="js/script.js"></script>
+    </body>
+</html>
